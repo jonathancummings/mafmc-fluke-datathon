@@ -1,0 +1,21 @@
+---
+title: "fluke-datathon"
+author: "Gavin Fay"
+date: "2/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(googlesheets4)
+library(tidyverse)
+```
+
+## Reading in the survey responses
+
+```{r read-data}
+datafile <- "https://docs.google.com/spreadsheets/d/1xBxCA7ubDQx2q2taOYJdQrNcl_mLZ_QYzU9kGJWPWv0/edit?usp=sharing"
+survey_data  <- read_sheet(datafile)
+survey_data
+```
+
